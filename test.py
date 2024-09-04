@@ -1,7 +1,7 @@
 import mlflow
 import pandas as pd
 
-mlflow.set_tracking_uri(uri="http://host.docker.internal:8080")
+mlflow.set_tracking_uri(uri="http://host.docker.internal:8090")
 # Load your saved model from MLflow
 model_uri = "models:/heart_disease/1"  # Replace <registered_model_name> with your model name
 model = mlflow.pyfunc.load_model(model_uri)
