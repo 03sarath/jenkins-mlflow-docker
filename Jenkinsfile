@@ -6,7 +6,7 @@ pipeline {
         stage('Getting Project from Git') {
             steps {
                 echo 'Project is downloading...'
-                git branch:'main', url:'https://github.com/RafrafiNawress/MLOps-Docker-Jenkins.git'
+                git branch:'master', url:'https://github.com/03sarath/jenkins-mlflow-docker.git'
   
                  }
              }
@@ -30,7 +30,6 @@ pipeline {
               steps {
                     bat 'docker container exec model python3 train.py'
                     bat 'docker container exec model python3 test.py'
-                    bat 'docker container exec model cat /home/jovyan/results/train_metadata.json /home/jovyan/results/test_metadata.json' 
                     bat 'docker rm -f model'
                   }
                }
