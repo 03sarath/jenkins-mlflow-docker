@@ -27,3 +27,4 @@ test_path = os.path.join(PROCESSED_DATA_DIR, 'test.csv')
 # Save csv
 train.to_csv(train_path, index=False)
 test.to_csv(test_path,  index=False)
+print("Preprocessing Job Completed")

@@ -24,6 +24,13 @@ pipeline {
                 bat 'docker container exec model python3 train.py'
             }
         }
+        stage('Manual Approval for Model Registration') {
+            steps {
+                script {
+                    input message: "Model training completed. Please register your ML model and approve to proceed to testing."
+                }
+            }
+        }
         stage('Test Stage') {
             steps {
                 bat 'docker container exec model python3 test.py'

@@ -29,3 +29,4 @@ prediction = model.predict(sample_input)
 
 # Print the prediction result
 print("Prediction for the sample input:", prediction)
+print("Test Completed")

@@ -99,3 +99,4 @@ with mlflow.start_run() as run:
     )
     
     print(mlflow.MlflowClient().get_run(run.info.run_id).data)
+    print("Training Job Completed")
